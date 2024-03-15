@@ -4,15 +4,80 @@
   margin: 0;
 }
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
 /* Variables */
 :root {
+  --color-header-img: #f5c044;
+  --color-primary: #18181b;
+  --color-secondary: #52525a;
+  --bg-color-primary: #fafaf9;
+  --bg-color-secondary: #fff;
+  --bg-surrounding: #d4d4d8;
 }
 
 /* Element Styling */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--bg-surrounding);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  width: 90%;
+  height: 90%;
+}
 
 /* Classes */
+
+.reviewers-header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.25rem;
+  font-family: Sora, sans-serif;
+  font-optical-sizing: auto;
+}
+
+.reviewers-header-img {
+  mix-blend-mode: color-dodge;
+}
+
+.reviewers-header-img-container {
+  border-radius: 50%;
+  background: var(--color-header-img);
+  padding: 0.1rem;
+  width: min-content;
+}
+
+.sora-primary-body {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-family: Sora, sans-serif;
+  font-optical-sizing: auto;
+}
+
+.sora-secondary-body {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: Sora, sans-serif;
+  font-optical-sizing: auto;
+}
+
+.sora-list-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: Sora, sans-serif;
+  font-optical-sizing: auto;
+}
