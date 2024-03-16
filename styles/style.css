@@ -31,13 +31,23 @@ body {
 
 main {
   display: grid;
+  grid-template-rows: 80%;
   grid-template-columns: 1fr 1fr;
-  padding: 1rem;
+  align-content: center;
+  gap: 5%;
+  background: var(--bg-color-primary);
+  padding: 0 5%;
   width: 90%;
   height: 90%;
 }
 
 /* Classes */
+.reviewers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
 
 .reviewers-header {
   font-style: normal;
@@ -49,16 +59,17 @@ main {
 
 .reviewers-header-img {
   mix-blend-mode: color-dodge;
+  width: 2.2rem;
 }
 
 .reviewers-header-img-container {
   border-radius: 50%;
   background: var(--color-header-img);
-  padding: 0.1rem;
-  width: min-content;
+  padding: 0.6rem;
+  width: max-content;
 }
 
-.sora-primary-body {
+.reviewers-body {
   font-style: normal;
   font-weight: 400;
   font-size: 1.25rem;
@@ -66,18 +77,31 @@ main {
   font-optical-sizing: auto;
 }
 
+.reviewers-list {
+  padding-left: 0.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: Sora, sans-serif;
+  font-optical-sizing: auto;
+  list-style: none;
+}
+
+.reviewers-list-item::before {
+  position: relative;
+  top: 0.3rem;
+  left: -0.5rem;
+  content: url("/img/Done_ring_round_fill.svg") " ";
+}
+
+.card-header-icon {
+  width: 100px;
+}
+
 .sora-secondary-body {
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  font-family: Sora, sans-serif;
-  font-optical-sizing: auto;
-}
-
-.sora-list-item {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.875rem;
   font-family: Sora, sans-serif;
   font-optical-sizing: auto;
 }
