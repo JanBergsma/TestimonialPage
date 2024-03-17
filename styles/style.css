@@ -89,19 +89,56 @@ main {
 
 .reviewers-list-item::before {
   position: relative;
-  top: 0.3rem;
+  top: 0.4rem;
   left: -0.5rem;
   content: url("/img/Done_ring_round_fill.svg") " ";
 }
 
-.card-header-icon {
-  width: 100px;
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.sora-secondary-body {
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 30px 200px 0 #1117292b;
+  border-radius: 15px;
+  padding: 2.4rem;
+  width: 75%;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
   font-family: Sora, sans-serif;
   font-optical-sizing: auto;
+}
+
+.card h2 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.card-header-icon {
+  width: 80px;
+}
+
+.card-header-stars {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.card-header-star {
+  width: 1.4rem;
+}
+
+.google {
+  place-self: flex-end;
 }
