@@ -1,7 +1,10 @@
+/* TODO: bring top icon more in line with design */
+
 /* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 /* Variables */
@@ -12,13 +15,27 @@
   --bg-color-primary: #fafaf9;
   --bg-color-secondary: #fff;
   --bg-surrounding: #d4d4d8;
+  --shadow-color: #1117292b;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-header-img: #f5c044;
+    --color-primary: #fafaf9;
+    --color-secondary: #fff;
+    --bg-color-primary: #18181b;
+    --bg-color-secondary: #52525a;
+    --bg-surrounding: #d4d4d8;
+    --shadow-color: #52525a25;
+  }
+}
+
+/*  Mobile <= 640px */
 
 /* Element Styling */
 html,
 body {
   width: 100%;
-  height: 100%;
 }
 
 body {
@@ -30,15 +47,14 @@ body {
 }
 
 main {
-  display: grid;
-  grid-template-rows: 80%;
-  grid-template-columns: 1fr 1fr;
-  align-content: center;
-  gap: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background: var(--bg-color-primary);
-  padding: 0 5%;
-  width: 90%;
-  height: 90%;
+  padding: 5rem 1.4rem;
+  width: 100%;
+  height: 100%;
+  color: var(--color-primary);
 }
 
 /* Classes */
@@ -78,7 +94,7 @@ main {
 }
 
 .reviewers-list {
-  padding-left: 0.4rem;
+  padding-left: 1rem;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -87,27 +103,33 @@ main {
   list-style: none;
 }
 
+.reviewers-list-item {
+  display: flex;
+  align-items: center;
+}
+
 .reviewers-list-item::before {
   position: relative;
-  top: 0.4rem;
+  top: 0.1rem;
   left: -0.5rem;
-  content: url("/img/Done_ring_round_fill.svg") " ";
+  content: url("/img/Done_ring_round_fill.svg");
 }
 
 .cards {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 30px 200px 0 #1117292b;
+  box-shadow: 0 30px 200px 0 var(--shadow-color);
   border-radius: 15px;
-  padding: 2.4rem;
-  width: 75%;
+  padding: 1rem;
+  width: 70%;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -127,18 +149,44 @@ main {
 }
 
 .card-header-icon {
-  width: 80px;
+  width: 40%;
 }
 
 .card-header-stars {
   display: flex;
   gap: 0.1rem;
+  width: 40%;
 }
 
 .card-header-star {
-  width: 1.4rem;
+  width: 100%;
 }
 
 .google {
   place-self: flex-end;
+}
+
+@media (width >= 640px) {
+  /* Elements */
+  html,
+  body {
+    height: 100%;
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    gap: 2rem;
+    padding: 0 5%;
+    width: 90%;
+    height: 90%;
+  }
+
+  /* Classes */
+  .card {
+    padding: 2.4rem;
+    width: 60%;
+  }
 }
