@@ -27,7 +27,7 @@
     --color-secondary: #fff;
     --bg-color-primary: #18181b;
     --bg-color-secondary: #52525a;
-    --bg-surrounding: #d4d4d8;
+    --bg-surrounding: #52525a;
     --shadow-color: #52525a4a;
   }
 }
@@ -130,7 +130,7 @@ main {
   gap: 1rem;
   box-shadow: 0 30px 200px 0 var(--shadow-color);
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1.4rem;
   width: 60%;
   min-width: 240px;
   font-style: normal;
